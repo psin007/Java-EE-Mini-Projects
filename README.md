@@ -1,2 +1,2 @@
 # Java-EE-Mini-Projects
-![Screenshot](week2/Screenshots/firstpage.jpg)
+![Screenshot of week2 before input data](week2/Screenshots/firstpage.JPG)
