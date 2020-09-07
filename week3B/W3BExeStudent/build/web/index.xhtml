@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>FIT5042 Week 3B - Home</title>
+        <h:outputStylesheet library="css" name="style.css"></h:outputStylesheet>
+    </h:head>
+
+    <h:body>
+
+        <header>
+            <h1>
+                Introduction to JavaServer Faces
+            </h1>
+        </header>
+        <article>
+            <h2>
+                Enter your details
+            </h2>
+            <h:form>
+                <p>
+                    Your name:
+                    <h:message for="personName" styleClass="error"></h:message>
+                </p>
+                <h:inputText id="personName" label="Name" required ="true" requiredMessage="You must enter a name!" size ="32" value="#{personBean.name}">
+                </h:inputText>
+                
+                <p>
+                    Your age:
+                    <h:message for="personAge" styleClass="error"></h:message>
+                </p>
+                <h:inputText id="personAge" label="Age" maxlength="2" required="true" requiredMessage="You must enter your age!" size="2" value="#{personBean.age}">
+                    <f:validateLongRange maximum="100" minimum="18"></f:validateLongRange>
+                </h:inputText>
+                
+                <p>
+                    Write a message:
+                    <h:message for="personMessage" styleClass="error"></h:message>
+                </p>
+                <h:inputTextarea id="personMessage" label="Message" required="true" requiredMessage="You must enter a message!" value="#{personBean.message}"></h:inputTextarea>
+                
+                <h:commandButton action="response" id="submit" value="Submit"></h:commandButton>
+            </h:form>
+        </article>
+        <footer>
+            <p>
+                This project is created by Pooja Sinha
+            </p>
+        </footer>
+    </h:body>
+</html>
+
